@@ -1,0 +1,12 @@
+---
+- name: single item loop testing
+  hosts: localhost
+  gather_facts: false
+  vars:
+    test_loop:
+      - item one
+  tasks:
+    - name: do the thing
+      ansible.bultin.debug:
+        var: item
+      loop: "{{ test_loop }}"
