@@ -7,6 +7,6 @@
       - item one
   tasks:
     - name: do the thing
-      ansible.bultin.debug:
+      ansible.builtin.debug:
         var: item
       loop: "{{ test_loop }}"
